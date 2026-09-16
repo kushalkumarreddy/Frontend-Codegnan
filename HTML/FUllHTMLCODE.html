@@ -1,0 +1,594 @@
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Page title -->
+    <title>HTML Beginner Practice</title>
+
+    <!-- Character encoding -->
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+
+    <!-- ================================================= -->
+    <!-- 1. HEADINGS -->
+    <!-- ================================================= -->
+
+    <h1>HTML Beginner Practice</h1>
+    <h2>HTML Topics</h2>
+    <h3>Basic HTML</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+
+    <!-- ================================================= -->
+    <!-- 2. PARAGRAPH -->
+    <!-- ================================================= -->
+
+    <p>
+        HTML stands for HyperText Markup Language.
+        HTML is used to create the structure of web pages.
+    </p>
+
+
+    <!-- ================================================= -->
+    <!-- 3. TEXT FORMATTING -->
+    <!-- ================================================= -->
+
+    <h2>Text Formatting</h2>
+
+    <p><b>Bold Text</b></p>
+
+    <p><strong>Important Text</strong></p>
+
+    <p><i>Italic Text</i></p>
+
+    <p><em>Emphasized Text</em></p>
+
+    <p><u>Underlined Text</u></p>
+
+    <p><mark>Highlighted Text</mark></p>
+
+    <p><small>Small Text</small></p>
+
+    <p><del>Deleted Text</del></p>
+
+    <p><ins>Inserted Text</ins></p>
+
+    <p>H<sub>2</sub>O</p>
+
+    <p>x<sup>2</sup></p>
+
+
+    <!-- ================================================= -->
+    <!-- 4. LINE BREAK AND HORIZONTAL LINE -->
+    <!-- ================================================= -->
+
+    <h2>Line Break</h2>
+
+    Hello<br>
+    Welcome to HTML
+
+    <hr>
+
+
+    <!-- ================================================= -->
+    <!-- 5. LINKS -->
+    <!-- ================================================= -->
+
+    <h2>Links</h2>
+
+    <a href="https://www.google.com">
+        Google
+    </a>
+
+    <br><br>
+
+    <a href="https://www.youtube.com" target="_blank">
+        YouTube
+    </a>
+
+
+    <!-- ================================================= -->
+    <!-- 6. IMAGE -->
+    <!-- ================================================= -->
+
+    <h2>Image</h2>
+
+    <img
+        src="car.jpg"
+        alt="Car Image"
+        width="300"
+    >
+
+
+    <!-- ================================================= -->
+    <!-- 7. LISTS -->
+    <!-- ================================================= -->
+
+    <h2>Unordered List</h2>
+
+    <ul>
+
+        <li>Java</li>
+        <li>HTML</li>
+        <li>SQL</li>
+        <li>Python</li>
+
+    </ul>
+
+
+    <h2>Ordered List</h2>
+
+    <ol>
+
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+
+    </ol>
+
+
+    <h2>Nested List</h2>
+
+    <ul>
+
+        <li>
+            Frontend
+
+            <ul>
+
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+
+            </ul>
+
+        </li>
+
+        <li>
+            Backend
+
+            <ul>
+
+                <li>Java</li>
+                <li>Spring Boot</li>
+                <li>MySQL</li>
+
+            </ul>
+
+        </li>
+
+    </ul>
+
+
+    <!-- ================================================= -->
+    <!-- 8. TABLE -->
+    <!-- ================================================= -->
+
+    <h2>Employee Table</h2>
+
+    <table border="1">
+
+        <tr>
+
+            <th>ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Salary</th>
+
+        </tr>
+
+        <tr>
+
+            <td>101</td>
+            <td>Ravi</td>
+            <td>IT</td>
+            <td>50000</td>
+
+        </tr>
+
+        <tr>
+
+            <td>102</td>
+            <td>Rahul</td>
+            <td>HR</td>
+            <td>45000</td>
+
+        </tr>
+
+        <tr>
+
+            <td>103</td>
+            <td>Priya</td>
+            <td>Finance</td>
+            <td>55000</td>
+
+        </tr>
+
+    </table>
+
+
+    <!-- ================================================= -->
+    <!-- 9. COLSPAN -->
+    <!-- ================================================= -->
+
+    <h2>Colspan</h2>
+
+    <table border="1">
+
+        <tr>
+
+            <th colspan="3">
+                Student Details
+            </th>
+
+        </tr>
+
+        <tr>
+
+            <th>ID</th>
+            <th>Name</th>
+            <th>Marks</th>
+
+        </tr>
+
+        <tr>
+
+            <td>1</td>
+            <td>Ravi</td>
+            <td>90</td>
+
+        </tr>
+
+    </table>
+
+
+    <!-- ================================================= -->
+    <!-- 10. ROWSPAN -->
+    <!-- ================================================= -->
+
+    <h2>Rowspan</h2>
+
+    <table border="1">
+
+        <tr>
+
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Marks</th>
+
+        </tr>
+
+        <tr>
+
+            <td rowspan="2">
+                Ravi
+            </td>
+
+            <td>Java</td>
+            <td>90</td>
+
+        </tr>
+
+        <tr>
+
+            <td>SQL</td>
+            <td>85</td>
+
+        </tr>
+
+    </table>
+
+
+    <!-- ================================================= -->
+    <!-- 11. FORM -->
+    <!-- ================================================= -->
+
+    <h2>Registration Form</h2>
+
+    <form>
+
+        <!-- Text -->
+        <label>Name:</label>
+
+        <input
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+        >
+
+        <br><br>
+
+
+        <!-- Email -->
+        <label>Email:</label>
+
+        <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+        >
+
+        <br><br>
+
+
+        <!-- Password -->
+        <label>Password:</label>
+
+        <input
+            type="password"
+            name="password"
+            placeholder="Enter password"
+        >
+
+        <br><br>
+
+
+        <!-- Number -->
+        <label>Age:</label>
+
+        <input
+            type="number"
+            name="age"
+        >
+
+        <br><br>
+
+
+        <!-- Date -->
+        <label>Date of Birth:</label>
+
+        <input
+            type="date"
+            name="dob"
+        >
+
+        <br><br>
+
+
+        <!-- Radio -->
+        <label>Gender:</label>
+
+        <input
+            type="radio"
+            name="gender"
+            value="male"
+        >
+        Male
+
+        <input
+            type="radio"
+            name="gender"
+            value="female"
+        >
+        Female
+
+        <br><br>
+
+
+        <!-- Checkbox -->
+        <label>Skills:</label>
+
+        <input
+            type="checkbox"
+            name="skill"
+            value="java"
+        >
+        Java
+
+        <input
+            type="checkbox"
+            name="skill"
+            value="html"
+        >
+        HTML
+
+        <input
+            type="checkbox"
+            name="skill"
+            value="sql"
+        >
+        SQL
+
+        <br><br>
+
+
+        <!-- Dropdown -->
+        <label>City:</label>
+
+        <select name="city">
+
+            <option>Select City</option>
+
+            <option>Hyderabad</option>
+
+            <option>Bangalore</option>
+
+            <option>Chennai</option>
+
+            <option>Mumbai</option>
+
+        </select>
+
+        <br><br>
+
+
+        <!-- Textarea -->
+        <label>Address:</label>
+
+        <br>
+
+        <textarea
+            rows="5"
+            cols="30"
+            placeholder="Enter your address">
+        </textarea>
+
+        <br><br>
+
+
+        <!-- File -->
+        <label>Upload Resume:</label>
+
+        <input
+            type="file"
+            name="resume"
+        >
+
+        <br><br>
+
+
+        <!-- Submit -->
+        <input
+            type="submit"
+            value="Submit"
+        >
+
+        <!-- Reset -->
+        <input
+            type="reset"
+            value="Reset"
+        >
+
+    </form>
+
+
+    <!-- ================================================= -->
+    <!-- 12. SEMANTIC HTML -->
+    <!-- ================================================= -->
+
+    <h2>Semantic HTML</h2>
+
+    <header>
+
+        <h3>My Website</h3>
+
+    </header>
+
+
+    <nav>
+
+        <a href="#">Home</a>
+
+        <a href="#">About</a>
+
+        <a href="#">Contact</a>
+
+    </nav>
+
+
+    <main>
+
+        <section>
+
+            <h3>About HTML</h3>
+
+            <p>
+                HTML provides the structure of a web page.
+            </p>
+
+        </section>
+
+
+        <article>
+
+            <h3>HTML Article</h3>
+
+            <p>
+                HTML is a markup language.
+            </p>
+
+        </article>
+
+    </main>
+
+
+    <aside>
+
+        <h3>Related Topics</h3>
+
+        <p>
+            CSS and JavaScript
+        </p>
+
+    </aside>
+
+
+    <footer>
+
+        <p>
+            Copyright 2026
+        </p>
+
+    </footer>
+
+
+    <!-- ================================================= -->
+    <!-- 13. DIV AND SPAN -->
+    <!-- ================================================= -->
+
+    <h2>Div and Span</h2>
+
+    <div>
+
+        <h3>Employee Information</h3>
+
+        <p>
+            Name: Ravi
+        </p>
+
+        <p>
+            Department:
+            <span>IT</span>
+        </p>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- 14. HTML ENTITIES -->
+    <!-- ================================================= -->
+
+    <h2>HTML Entities</h2>
+
+    <p>
+        &lt; HTML &gt;
+    </p>
+
+    <p>
+        Copyright &copy; 2026
+    </p>
+
+    <p>
+        A &amp; B
+    </p>
+
+
+    <!-- ================================================= -->
+    <!-- 15. DETAILS AND SUMMARY -->
+    <!-- ================================================= -->
+
+    <h2>Details and Summary</h2>
+
+    <details>
+
+        <summary>
+            What is HTML?
+        </summary>
+
+        <p>
+            HTML stands for HyperText Markup Language.
+        </p>
+
+    </details>
+
+
+</body>
+
+</html>
