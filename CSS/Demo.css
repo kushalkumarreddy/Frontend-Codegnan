@@ -1,28 +1,11 @@
-/* Tag Selector */
-h3 {
+h1 {
+    text-align: center;
     color: red;
+    text-decoration: overline;
 }
 
-
-/* ID Selector */
-#heading {
+.para{
     color: blue;
-}
-
-
-/* Class Selector */
-.text {
-    color: green;
-}
-
-
-/* Universal Selector */
-* {
-    font-family: Arial;
-}
-
-
-/* Group Selector */
-h1, h4 {
-    background-color: yellow;
+    text-align: justify;
+    
 }
