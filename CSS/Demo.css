@@ -1,0 +1,28 @@
+/* Tag Selector */
+h3 {
+    color: red;
+}
+
+
+/* ID Selector */
+#heading {
+    color: blue;
+}
+
+
+/* Class Selector */
+.text {
+    color: green;
+}
+
+
+/* Universal Selector */
+* {
+    font-family: Arial;
+}
+
+
+/* Group Selector */
+h1, h4 {
+    background-color: yellow;
+}
