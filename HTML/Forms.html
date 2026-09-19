@@ -3,9 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forms</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1>Form</h1>
+    <form autocomplete="on" action="structute.html" style="border: 2px solid red;width: 50%;">
+       <h2>Register form</h2>
+       
+        <label>First name :- </label>
+        <input type="text" required/><br><br>
+
+
+         <label>Middle name :- </label>
+        <input type="text" style="width: 100%;"/><br><br>
+
+
+         <label>Last name :- </label>
+        <input type="text" /><br><br>
+
+
+        <label>Mobile number :- </label>
+        <input type="number" min="10" max="12"/><br><br>
+
+
+        <label>Email:- </label>
+        <input type="email" /><br><br>
+
+
+        <label>Password:- </label>
+        <input type="password" minlength="12" maxlength="18"/><br><br>
+
+
+         <label>Confrim Password:- </label>
+        <input type="password" autofocus/><br><br>
+
+
+         <label>DOB:- </label>
+        <input type="date" /><br><br>
+
+
+         <label>Gender:- </label>
+        <input type="radio" name="Gender"/><label>Male</label>
+        <input type="radio" name="Gender"/><label>Female</label>
+        <input type="radio" name="Gender"/><label>Others</label><br><br>
+
+
+         <label>Hobbies:- </label>
+        <input type="checkbox" /><label>Reading</label>
+        <input type="checkbox" /><label>Writing</label>
+        <input type="checkbox" /><label>Playing</label><br><br>
+
+
+        <label>City :- </label>
+        <select>
+            <option>--Select--</option>
+            <option>HYD</option>
+            <option>VYD</option>
+            <option>VIZAG</option>
+            <option>RJY</option>
+            <option>Kerala</option>
+        </select><br><br>
+
+
+        <label>Adress:--</label>
+        <!-- <input type="text"/><br><br> -->
+         <textarea></textarea><br><br>
+
+
+         <input type="color"/>
+        Resume  :-  <input type="file"/>
+        <input type="search"/><br><br>
+
+
+<input type="button" name="register" value="Register" />
+<input type="submit" disabled/>
+
+
+<button>Register</button>
+
+
+
+
+    </form>
+
+
+    <hr>
+
+
+    <form>
+        <fieldset>
+            <legend>Login form</legend>
+
+
+           
+        <input type="text" placeholder="User name" value="Mr / Mrs : " readonly/><br><br>
+
+
+        <label>Mobile number :- </label>
+        <input type="number" /><br><br>
+
+
+        <label>Email:- </label>
+        <input type="email" value="Enter email"/><br><br>
+
+
+        <label>Password:- </label>
+        <input type="password" /><br><br>
+        </fieldset>
+    </form>
+
+
+    <form>
+        <table>
+            <tr>
+                <td><label>First name</label></td>
+                <td> : </td>
+                <td><input type="text"/></td>
+            </tr>
+
+
+            <tr>
+                <td><label> email</label></td>
+                <td> : </td>
+                <td><input type="email"/></td>
+            </tr>
+
+
+            <tr>
+                <td><label>Password</label></td>
+                <td> : </td>
+                <td><input type="text"/></td>
+            </tr>
+
+
+            <tr>
+                <td><label>Gendere</label></td>
+                <td> : </td>
+                <td><input type="radio"/><label>Male</label>
+                <input type="radio"/><label>Male</label>
+                <input type="radio"/><label>Male</label>
+                </td>
+               
+            </tr>
+        </table>
+    </form>
 </body>
 </html>
