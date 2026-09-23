@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/079c2998c3.js"></script>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        #nav-container{
+            background-color: grey;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #nav-container a{
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+        }
+        #nav-container a:hover{
+            background-color: red;
+            color: aqua;
+            text-decoration: underline;
+        }
+        .nav-logo{
+            color: white;
+            font-size: larger;
+            cursor: pointer;
+        }
+        .nav-btn{
+            padding: 5px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;            
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="nav-container">
+
+        <div class="nav-logo">
+            MyLogo
+        </div>
+
+        <div id="nav-items">
+        <i class="fa-regular fa-house"></i><a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <i class="fa-solid fa-phone fa-fade" style="color: rgb(116, 192, 252);"></i><a href="#">Contact</a>
+        </div>
+
+        <button class="nav-btn">Login</button>
+    </div>
+
+</body>
+</html>
