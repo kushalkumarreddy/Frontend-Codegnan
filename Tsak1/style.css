@@ -1,0 +1,39 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 50px;
+    padding-left: 50px;
+    
+}
+
+.links{
+    list-style-type: none;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    padding: 0px;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 50px 250px;   
+}
+
+.back{
+    background: linear-gradient(to top left,  pink,purple);
+}
+
+.hero>h1{
+    font-size: 60px;
+}
+
+p{
+    text-align: center;
+}
+
+.icon{
+    padding-top: 20px;
+    font-size: 30px;
+}
