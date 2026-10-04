@@ -1,0 +1,48 @@
+.container{
+    width: 300px;
+    border: 5px solid black;
+    position: relative;
+    transition: all 0.2s linear 0s;
+}
+
+.image-container{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.image{
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s linear 0s;
+}
+
+.chip{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: yellow;
+    border: none;
+}
+
+.add{
+    background-color: green;
+    color: black;
+    padding: 20px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    width: 100%;
+    border: none;
+}
+
+.add:hover{
+    background-color: rgb(91, 199, 75);
+}
+
+.container:hover{
+    transform: translateY(-10px);
+}
+
+.container:hover .image{
+    transform: scale(1.5);
+}

@@ -1,0 +1,41 @@
+.card {
+    width: 300px;
+    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.card1 {
+    width: 300px;
+    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: violet;
+}
+
+p{
+    text-align: center;
+}
+
+.btn {
+    border: none;
+    background-color: black;
+    color: white;
+    text-transform:uppercase;
+    font-size: 15px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 30px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
