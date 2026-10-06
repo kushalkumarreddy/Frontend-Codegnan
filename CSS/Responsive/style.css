@@ -1,0 +1,44 @@
+body{
+    padding: 0px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links{
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.menu{
+    display: none;
+}
+
+.codehead{
+    font-size: 40px;
+    color: #2C0A56;
+    align-items: center;
+}
+
+.codebody{
+    color: black;
+    justify-content: center;
+}
+
+
+
+
+@media (max-width:800px) {
+    .nav-links{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+}

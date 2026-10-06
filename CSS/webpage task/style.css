@@ -1,0 +1,166 @@
+.navbar {
+    background: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #3D5A45;
+}
+
+ol {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    padding: 100px 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+}
+
+.container button {
+    background-color: lightgreen;
+    color: black;
+    padding: 10px 10px;
+    border-radius: 20px;
+    margin: 50px;
+    border: 2px solid white;
+}
+
+.container button:hover {
+    background-color: white;
+}
+
+.products{
+    text-align: center;
+    padding: 50px 150px;
+}
+
+.pc {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.pc1 {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 12px;
+
+}
+
+.pc1 img {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #4a7c3a;
+    font-weight: bold;
+    margin: 8px 0 12px;
+}
+
+.pc1 button{
+    background-color: lightgreen;
+    color: black;
+    padding: 10px 10px;
+    border-radius: 20px;
+    margin: 20px;
+    border: 2px solid white;
+}
+
+.pc1 button:hover{
+    background-color: aliceblue;
+}
+
+.story {
+    background-color: #eaf5e8;
+    padding: 70px 100px;
+}
+
+.story-inner {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.story-text {
+    width: 50%;
+}
+
+.story-text h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.story-text p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.story-text ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.story-text li {
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+.story-text li i {
+    font-size: 22px;
+    margin-right: 20px;
+}
+
+.story-image {
+    width: 50%;
+}
+
+.story-image img {
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.testimonials {
+    padding: 70px 0;
+    background-color: #FAFAF5;
+    text-align: center;
+}
+
+.testi-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.testi-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.testi-card h4 {
+    margin: 12px 0 5px;
+}
