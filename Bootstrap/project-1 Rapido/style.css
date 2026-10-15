@@ -1,0 +1,393 @@
+
+/* Apply box sizing to all elements */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+}
+
+
+/* =========================
+   1. NAVBAR
+   ========================= */
+
+.site-header {
+    background-color: #ffffff;
+}
+
+.rapido-navbar {
+    min-height: 103px;
+    padding: 12px 0;
+    background-color: #ffffff;
+}
+
+/* Logo */
+.navbar-brand {
+    margin-right: 40px;
+}
+
+.navbar-brand img {
+    display: block;
+    width: 145px;
+    height: auto;
+}
+
+/* Navigation links */
+.rapido-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.rapido-nav .nav-link {
+    position: relative;
+    padding: 12px 0;
+    color: #000000;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+/* Home underline */
+.rapido-nav .nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 100%;
+    height: 4px;
+    background-color: #000000;
+    border-radius: 2px;
+}
+
+/* Download App button */
+.download-btn {
+    display: inline-block;
+    padding: 13px 27px;
+    border-radius: 30px 30px 0 30px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+}
+
+.download-btn:hover {
+    background-color: #ffca1c;
+    color: #000000;
+}
+
+
+/* =========================
+   2. HERO SECTION
+   ========================= */
+
+.hero-section {
+    min-height: calc(100vh - 103px);
+    padding: 70px 0;
+    background-color: #f5f9ff;
+}
+
+.hero-row {
+    min-height: 600px;
+}
+
+/* Left column */
+.hero-content {
+    padding-right: 28px;
+}
+
+/* Main heading */
+.hero-title {
+    margin: 0 0 14px;
+    color: #333333;
+    font-size: clamp(40px, 3.3vw, 60px);
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+/* Subtitle */
+.hero-subtitle {
+    margin: 0 0 58px;
+    color: #34445b;
+    font-size: clamp(20px, 1.7vw, 30px);
+    line-height: 1.4;
+}
+
+
+/* =========================
+   3. LOCATION INPUT BOXES
+   ========================= */
+
+.booking-form {
+    width: 100%;
+}
+
+.location-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 86px;
+    margin-bottom: 18px;
+    padding: 0 26px;
+    border: 1px solid #b8b8b8;
+    border-radius: 11px;
+    background-color: #ffffff;
+    cursor: text;
+}
+
+/* Location icons */
+.location-icon,
+.drop-icon {
+    display: flex;
+    flex: 0 0 24px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    color: #202630;
+}
+
+.location-icon svg,
+.drop-icon svg {
+    display: block;
+    width: 25px;
+    height: 25px;
+    fill: currentColor;
+}
+
+/* Input fields */
+.location-box input {
+    width: 100%;
+    min-width: 0;
+    padding: 10px 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #333333;
+    font: inherit;
+    font-size: 21px;
+}
+
+.location-box input::placeholder {
+    color: #777777;
+    opacity: 1;
+}
+
+
+/* =========================
+   4. BOOK RIDE BUTTON
+   ========================= */
+
+.book-ride-btn {
+    width: 100%;
+    min-height: 96px;
+    margin-top: 34px;
+    border: 0;
+    border-radius: 12px;
+    background-color: #ffca1c;
+    color: #000000;
+    font-size: 36px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.book-ride-btn:hover {
+    background-color: #f3bd00;
+}
+
+
+/* =========================
+   5. RIGHT-SIDE IMAGE
+   ========================= */
+
+.hero-image-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image {
+    display: block;
+    width: 100%;
+    max-width: 660px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* =========================
+   6. TABLET RESPONSIVENESS
+   ========================= */
+
+@media (max-width: 991.98px) {
+
+    .rapido-navbar {
+        min-height: auto;
+    }
+
+    .rapido-nav {
+        align-items: flex-start;
+        gap: 8px;
+        padding: 16px 0;
+    }
+
+    .rapido-nav .nav-link {
+        padding: 8px 0;
+    }
+
+    .download-btn {
+        margin-top: 8px;
+    }
+
+    .hero-section {
+        min-height: auto;
+        padding: 45px 0;
+    }
+
+    .hero-row {
+        min-height: auto;
+        row-gap: 45px;
+    }
+
+    .hero-content {
+        padding-right: 12px;
+    }
+
+    .hero-title {
+        font-size: clamp(40px, 7vw, 56px);
+    }
+
+    .hero-subtitle {
+        margin-bottom: 35px;
+        font-size: clamp(20px, 3.5vw, 27px);
+    }
+
+    .hero-image {
+        max-width: 620px;
+    }
+}
+
+
+/* =========================
+   7. MOBILE RESPONSIVENESS
+   ========================= */
+
+@media (max-width: 575.98px) {
+
+    .navbar-brand img {
+        width: 125px;
+    }
+
+    .hero-section {
+        padding: 30px 0;
+    }
+
+    .hero-title {
+        font-size: 40px;
+        line-height: 1.25;
+    }
+
+    .hero-subtitle {
+        margin-bottom: 30px;
+        font-size: 19px;
+    }
+
+    .location-box {
+        min-height: 70px;
+        padding: 0 15px;
+    }
+
+    .location-icon,
+    .drop-icon {
+        margin-right: 13px;
+    }
+
+    .location-box input {
+        font-size: 16px;
+    }
+
+    .book-ride-btn {
+        min-height: 75px;
+        margin-top: 20px;
+        font-size: 28px;
+    }
+}
+
+
+/* OUR SERVICES SECTION */
+.services-section {
+    padding: 50px 0;
+    background-color: #ffffff;
+}
+
+/* Section heading */
+.services-title {
+    font-size: 58px;
+    font-weight: 700;
+    color: #333333;
+    margin: 0;
+}
+
+/* Yellow underline */
+.title-underline {
+    width: 160px;
+    height: 5px;
+    background-color: #ffca1c;
+    margin-top: 12px;
+    margin-bottom: 42px;
+}
+
+/* Spacing between service images */
+.services-row {
+    row-gap: 40px;
+}
+
+/* Service card images */
+.service-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Tablet */
+@media (max-width: 991.98px) {
+    .services-title {
+        font-size: 46px;
+    }
+
+    .title-underline {
+        margin-bottom: 30px;
+    }
+
+    .services-row {
+        row-gap: 25px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 575.98px) {
+    .services-section {
+        padding: 30px 0;
+    }
+
+    .services-title {
+        font-size: 36px;
+    }
+
+    .title-underline {
+        width: 120px;
+        height: 4px;
+        margin-top: 8px;
+        margin-bottom: 25px;
+    }
+
+    .services-row {
+        row-gap: 20px;
+    }
+}
