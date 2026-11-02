@@ -1,0 +1,250 @@
+@media (max-width: 991.98px) {
+
+    .rapido-navbar {
+        min-height: auto;
+    }
+
+    .rapido-nav {
+        align-items: flex-start;
+        gap: 8px;
+        padding: 16px 0;
+    }
+
+    .rapido-nav .nav-link {
+        padding: 8px 0;
+    }
+
+    .download-btn {
+        margin-top: 8px;
+    }
+
+    .hero-section {
+        min-height: auto;
+        padding: 45px 0;
+    }
+
+    .hero-row {
+        min-height: auto;
+        row-gap: 45px;
+    }
+
+    .hero-content {
+        padding-right: 12px;
+    }
+
+    .hero-title {
+        font-size: clamp(40px, 7vw, 56px);
+    }
+
+    .hero-subtitle {
+        margin-bottom: 35px;
+        font-size: clamp(20px, 3.5vw, 27px);
+    }
+
+    .hero-image {
+        max-width: 620px;
+    }
+
+    .services-title {
+        font-size: 46px;
+    }
+
+    .title-underline {
+        margin-bottom: 30px;
+    }
+
+    .services-row {
+        row-gap: 25px;
+    }
+
+    .offer-title,
+    .download-title {
+        font-size: 46px;
+    }
+
+    .offer-image {
+        height: 280px;
+    }
+
+    .earn-content {
+        padding-left: 12px;
+    }
+
+    .earn-content h2 {
+        font-size: 40px;
+    }
+
+    .earn-content p {
+        margin: 30px 0;
+        font-size: 25px;
+    }
+
+    .earn-image {
+        height: 380px;
+    }
+
+    .download-card {
+        justify-content: flex-start;
+        padding: 25px;
+    }
+
+    .download-card > span {
+        font-size: 24px;
+    }
+
+    .captain-logo {
+        width: 190px;
+    }
+}
+
+@media (max-width: 575.98px) {
+
+    .navbar-brand img {
+        width: 125px;
+    }
+
+    .hero-section {
+        padding: 30px 0;
+    }
+
+    .hero-title {
+        font-size: 40px;
+        line-height: 1.25;
+    }
+
+    .hero-subtitle {
+        margin-bottom: 30px;
+        font-size: 19px;
+    }
+
+    .location-box {
+        min-height: 70px;
+        padding: 0 15px;
+    }
+
+    .location-icon,
+    .drop-icon {
+        margin-right: 13px;
+    }
+
+    .location-box input {
+        font-size: 16px;
+    }
+
+    .book-ride-btn {
+        min-height: 75px;
+        margin-top: 20px;
+        font-size: 28px;
+    }
+
+    .services-section {
+        padding: 30px 0;
+    }
+
+    .services-title {
+        font-size: 36px;
+    }
+
+    .title-underline {
+        width: 120px;
+        height: 4px;
+        margin-top: 8px;
+        margin-bottom: 25px;
+    }
+
+    .services-row {
+        row-gap: 20px;
+    }
+
+    .offer-section {
+        padding: 30px 0 45px;
+    }
+
+    .offer-title,
+    .download-title {
+        font-size: 36px;
+    }
+
+    .offer-row {
+        margin-top: 35px;
+    }
+
+    .offer-image {
+        height: auto;
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+    .offer-card h3 {
+        margin-top: 15px;
+        font-size: 20px;
+    }
+
+    .offer-card p {
+        font-size: 15px;
+    }
+
+    .earn-section {
+        padding: 35px 0;
+    }
+
+    .earn-image {
+        height: auto;
+        max-height: 300px;
+    }
+
+    .earn-content {
+        padding-left: 12px;
+    }
+
+    .earn-content h2 {
+        font-size: 34px;
+    }
+
+    .earn-content p {
+        margin: 25px 0;
+        font-size: 21px;
+    }
+
+    .start-earning-btn {
+        font-size: 22px;
+    }
+
+    .download-section {
+        padding: 35px 0 50px;
+    }
+
+    .download-section .title-underline {
+        margin-bottom: 35px;
+    }
+
+    .download-card {
+        min-height: 150px;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .download-card img {
+        width: 150px;
+    }
+
+    .download-card > span {
+        font-size: 19px;
+    }
+
+    .captain-logo {
+        width: 145px;
+    }
+
+    .captain-logo span {
+        font-size: 16px;
+    }
+
+    .footer-section {
+        padding-top: 35px;
+    }
+
+    .footer-column {
+        gap: 13px;
+    }
+}

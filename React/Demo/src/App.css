@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: white;
+}
+
+/* Header */
+.doctor-header {
+    background: black;
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.doctor-header h2 {
+    font-family: Georgia, serif;
+    font-size: 26px;
+    margin: 0;
+}
+
+.doctor-header button {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Doctor Grid */
+.doctor-container {
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 21px;
+}
+
+/* Doctor Card */
+.card {
+    border: 1px solid #555;
+    border-radius: 10px;
+    padding: 22px;
+    min-height: 217px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+}
+
+.doctor-info {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+}
+
+.doctor-image {
+    width: 110px;
+    height: 110px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.doctor-image svg {
+    width: 100%;
+    height: 100%;
+}
+
+.doctor-details h2 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    margin: 0 0 3px;
+}
+
+.specialization {
+    color: #0645d8;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+.gender {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    margin: 2px 0 0;
+}
+
+/* Button */
+.view-button {
+    width: 100%;
+    height: 39px;
+    background: #2454e9;
+    color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.view-button:hover {
+    background: #1744d2;
+}
+
+/* Loading */
+.loading {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .doctor-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .doctor-container {
+        grid-template-columns: 1fr;
+    }
+
+    .doctor-header {
+        padding: 15px;
+    }
+
+    .doctor-details h2 {
+        font-size: 21px;
+    }
+
+    .doctor-image {
+        width: 90px;
+        height: 90px;
+    }
+}

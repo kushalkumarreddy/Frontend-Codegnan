@@ -1,0 +1,112 @@
+.hero-section {
+    min-height: calc(100vh - 103px);
+    padding: 70px 0;
+    background-color: #f5f9ff;
+}
+
+.hero-row {
+    min-height: 600px;
+}
+
+.hero-content {
+    padding-right: 28px;
+}
+
+.hero-title {
+    margin: 0 0 14px;
+    color: #333333;
+    font-size: clamp(40px, 3.3vw, 60px);
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.hero-subtitle {
+    margin: 0 0 58px;
+    color: #34445b;
+    font-size: clamp(20px, 1.7vw, 30px);
+    line-height: 1.4;
+}
+
+.booking-form {
+    width: 100%;
+}
+
+.location-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 86px;
+    margin-bottom: 18px;
+    padding: 0 26px;
+    border: 1px solid #b8b8b8;
+    border-radius: 11px;
+    background-color: #ffffff;
+    cursor: text;
+}
+
+.location-icon,
+.drop-icon {
+    display: flex;
+    flex: 0 0 24px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    color: #202630;
+}
+
+.location-icon svg,
+.drop-icon svg {
+    display: block;
+    width: 25px;
+    height: 25px;
+    fill: currentColor;
+}
+
+.location-box input {
+    width: 100%;
+    min-width: 0;
+    padding: 10px 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #333333;
+    font: inherit;
+    font-size: 21px;
+}
+
+.location-box input::placeholder {
+    color: #777777;
+    opacity: 1;
+}
+
+.book-ride-btn {
+    width: 100%;
+    min-height: 96px;
+    margin-top: 34px;
+    border: 0;
+    border-radius: 12px;
+    background-color: #ffca1c;
+    color: #000000;
+    font-size: 36px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.book-ride-btn:hover {
+    background-color: #f3bd00;
+}
+
+.hero-image-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image {
+    display: block;
+    width: 100%;
+    max-width: 660px;
+    height: auto;
+    object-fit: contain;
+}

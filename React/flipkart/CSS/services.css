@@ -1,0 +1,29 @@
+.services-section {
+    padding: 50px 0;
+    background-color: #ffffff;
+}
+
+.services-title {
+    font-size: 58px;
+    font-weight: 700;
+    color: #333333;
+    margin: 0;
+}
+
+.title-underline {
+    width: 160px;
+    height: 5px;
+    background-color: #ffca1c;
+    margin-top: 12px;
+    margin-bottom: 42px;
+}
+
+.services-row {
+    row-gap: 40px;
+}
+
+.service-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
