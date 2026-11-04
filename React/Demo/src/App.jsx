@@ -1,11 +1,11 @@
-import React from "react";
-import Demo from "./components/Demo";
-import "./App.css";
+import AddDoctor from "./components/AddDoctor";
+import DoctorDetails from "./components/DoctorDetails"
 
 function App() {
     return (
         <>
-            <Demo />
+            <AddDoctor/>
+            <DoctorDetails/>
         </>
     );
 }

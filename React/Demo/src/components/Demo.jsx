@@ -56,37 +56,7 @@ function Demo() {
         return matchesName && matchesSpecialization;
     });
 
-    async function addDoctor(e) {
-        e.preventDefault();
-
-        try {
-            setLoading(true);
-
-            await axios.post(API_URL, {
-                ...form,
-                age: Number(form.age)
-            });
-
-            alert("Doctor added successfully!");
-
-            setForm({
-                name: "",
-                salary: "",
-                gender: "Male",
-                age: "",
-                specialization: ""
-            });
-
-            await getData();
-            setPage("home");
-
-        } catch (err) {
-            console.log(err);
-            alert("Unable to add doctor. Check your backend API.");
-        } finally {
-            setLoading(false);
-        }
-    }
+    
 
     function clearFilters() {
         setSearch("");
