@@ -1,0 +1,259 @@
+
+/* =================================
+   DOCTOR DETAILS MAIN CONTAINER
+================================= */
+
+.doctor-details-container {
+    width: 100%;
+    min-height: calc(100vh - 72px);
+
+    padding: 35px 20px;
+
+    background-color: #ffffff;
+}
+
+
+/* =================================
+   PAGE HEADING
+================================= */
+
+.doctor-details-heading {
+    text-align: center;
+
+    font-family: Georgia, serif;
+    font-size: 30px;
+
+    color: #111111;
+
+    margin-bottom: 25px;
+}
+
+
+/* =================================
+   DOCTOR DETAILS CARD
+================================= */
+
+.doctor-details-card {
+    width: 650px;
+    max-width: 95%;
+
+    margin: 0 auto;
+    padding: 30px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+}
+
+
+/* =================================
+   DOCTOR AVATAR
+================================= */
+
+.doctor-details-avatar {
+    width: 110px;
+    height: 110px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #ff5964;
+
+    border-radius: 50%;
+
+    font-size: 65px;
+}
+
+
+/* =================================
+   DOCTOR NAME
+================================= */
+
+.doctor-details-name {
+    font-family: Georgia, serif;
+    font-size: 26px;
+
+    color: #000000;
+
+    margin-bottom: 8px;
+}
+
+
+/* =================================
+   SPECIALIZATION
+================================= */
+
+.doctor-details-specialization {
+    color: #2151e8;
+
+    font-size: 17px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =================================
+   DOCTOR DETAILS TABLE
+================================= */
+
+.doctor-details-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    text-align: left;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+
+/* Table rows and cells */
+
+.doctor-details-table th,
+.doctor-details-table td {
+    padding: 16px 18px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    font-size: 16px;
+}
+
+
+/* Table heading column */
+
+.doctor-details-table th {
+    width: 40%;
+
+    background-color: #f4f6fb;
+
+    color: #222222;
+
+    font-weight: bold;
+}
+
+
+/* Table data column */
+
+.doctor-details-table td {
+    color: #444444;
+}
+
+
+/* Table hover effect */
+
+.doctor-details-table tr:hover {
+    background-color: #f5f8ff;
+}
+
+
+/* Remove last row border */
+
+.doctor-details-table tr:last-child th,
+.doctor-details-table tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =================================
+   ACTION BUTTONS
+================================= */
+
+.doctor-details-actions {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+
+/* Common button design */
+
+.doctor-details-actions button {
+    width: 150px;
+    height: 45px;
+
+    color: #ffffff;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Delete button */
+
+.delete-btn {
+    background-color: #dc3545;
+}
+
+.delete-btn:hover {
+    background-color: #b02a37;
+
+    transform: translateY(-2px);
+}
+
+
+/* Edit button */
+
+.edit-btn {
+    background-color: #2151e8;
+}
+
+.edit-btn:hover {
+    background-color: #1238b8;
+
+    transform: translateY(-2px);
+}
+
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 600px) {
+
+    .doctor-details-container {
+        padding: 25px 12px;
+    }
+
+    .doctor-details-card {
+        width: 100%;
+        padding: 18px;
+    }
+
+    .doctor-details-heading {
+        font-size: 25px;
+    }
+
+    .doctor-details-table th,
+    .doctor-details-table td {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .doctor-details-actions button {
+        width: 120px;
+    }
+
+}

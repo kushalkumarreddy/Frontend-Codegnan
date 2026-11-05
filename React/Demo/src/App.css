@@ -1,415 +1,1015 @@
-* {
-    box-sizing: border-box;
+
+/* GENERAL APPLICATION */
+
+#root {
+    min-height: 100vh;
 }
 
 body {
-    margin: 0;
-    background: #ffffff;
-    color: #000000;
-    font-family: Arial, sans-serif;
+    background-color: #ffffff;
 }
 
-/* NAVBAR */
 
-.navbar {
+/* NAVIGATION BAR */
+
+#root > div > div:first-child {
     width: 100%;
-    height: 72px;
-    background: #000000;
+    min-height: 72px;
+    background-color: #000000;
+
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 22px;
+    justify-content: flex-end;
+
+    gap: 12px;
+    padding: 12px 22px;
 }
 
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    color: white;
+/* Application logo */
+
+#root > div > div:first-child::before {
+    content: "Doctors App";
+
+    color: #ffffff;
     font-family: Georgia, serif;
     font-size: 25px;
+
+    margin-right: auto;
 }
 
-.brand-icon {
-    width: 23px;
-    height: 23px;
-    border: 2px solid #2454e9;
-    color: #2454e9;
-    border-radius: 3px;
-    font-family: Arial, sans-serif;
-    font-size: 22px;
-    line-height: 18px;
-    text-align: center;
-}
+/* Navigation buttons */
 
-.nav-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.nav-button {
-    width: 120px;
+#root > div > div:first-child button {
+    width: 150px;
     height: 40px;
-    background: transparent;
-    border: 2px solid white;
+
+    background-color: #000000;
+    color: #ffffff;
+
+    border: 2px solid #ffffff;
     border-radius: 10px;
-    color: white;
+
     font-size: 15px;
-    cursor: pointer;
+
+    transition: 0.3s ease;
 }
 
-.add-nav {
-    width: 154px;
+#root > div > div:first-child button:hover {
+    background-color: #ffffff;
+    color: #000000;
 }
 
-.nav-button:hover {
-    background: white;
-    color: black;
-}
 
-/* MAIN CONTENT */
+/* HOME PAGE */
 
-.main-content {
+#root > div > div:nth-child(2):has(.card) {
     width: 100%;
     min-height: calc(100vh - 72px);
-    padding: 22px 20px 50px;
+
+    padding: 35px 5%;
+    background-color: #ffffff;
 }
 
-/* SEARCH AND FILTER */
+/* Doctor cards container */
 
-.filter-bar {
+#root > div > div:nth-child(2):has(.card) > div {
     display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+
     justify-content: center;
-    align-items: center;
-    gap: 11px;
-    margin-bottom: 22px;
+    align-items: stretch;
+
+    gap: 22px;
 }
 
-.filter-bar input,
-.filter-bar select {
-    height: 39px;
-    padding: 0 10px;
-    border: 1px solid #555;
-    border-radius: 6px;
-    background: white;
-    font-size: 14px;
-}
 
-.filter-bar input {
-    width: 198px;
-}
+/* DOCTOR CARD DESIGN */
 
-.filter-bar select {
-    width: 160px;
-}
+.card {
+    width: 440px;
+    flex: 0 1 440px;
 
-.clear-button {
-    min-width: 160px;
-    height: 39px;
-    background: #2454e9;
-    border: 2px solid black;
-    border-radius: 10px;
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
-}
+    min-height: 215px;
 
-.clear-button:hover {
-    background: #1744d2;
-}
-
-/* DOCTOR GRID */
-
-.doctor-grid {
-    max-width: 1362px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 21px;
-    align-items: start;
-}
-
-/* DOCTOR CARD */
-
-.doctor-card {
-    min-height: 217px;
     padding: 22px;
-    border: 1px solid #555;
+
+    background-color: #ffffff;
+
+    border: 1px solid #333333;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 20px;
-}
 
-.doctor-info {
-    display: flex;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.08);
+
+    display: grid;
+
+    grid-template-columns: 110px 1fr;
+    grid-template-rows: auto auto auto 1fr;
+
+    column-gap: 20px;
+
     align-items: center;
-    gap: 21px;
+
+    transition: all 0.3s ease;
 }
 
-.doctor-avatar {
+/* Card hover effect */
+
+.card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.12);
+}
+
+
+/* DOCTOR PROFILE IMAGE */
+
+.card::before {
+    content: "👨🏻‍⚕️";
+
     width: 110px;
     height: 110px;
-    flex-shrink: 0;
+
+    background-color: #ff5964;
+
     border-radius: 50%;
-    overflow: hidden;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 65px;
+
+    grid-column: 1;
+    grid-row: 1 / 4;
 }
 
-.doctor-avatar svg {
-    width: 100%;
-    height: 100%;
-    display: block;
-}
 
-.doctor-details {
-    min-width: 0;
-}
+/* DOCTOR NAME */
 
-.doctor-details h2 {
-    margin: 0 0 3px;
+.card h1 {
+    grid-column: 2;
+    grid-row: 1;
+
     font-family: Georgia, serif;
     font-size: 25px;
-    line-height: 1.15;
-}
 
-.specialization {
+    color: #000000;
+
     margin: 0;
-    color: #0645d8;
-    font-family: Georgia, serif;
-    font-size: 16px;
 }
 
-.gender {
-    margin: 2px 0 0;
+
+/* SPECIALIZATION */
+
+.card h6:first-of-type {
+    grid-column: 2;
+    grid-row: 2;
+
     font-family: Georgia, serif;
     font-size: 16px;
+
+    font-weight: normal;
+
+    color: #174eea;
+
+    margin: 0;
 }
 
-/* VIEW DETAILS */
 
-.view-button {
+/* GENDER */
+
+.card h6:last-of-type {
+    grid-column: 2;
+    grid-row: 3;
+
+    font-family: Georgia, serif;
+    font-size: 16px;
+
+    font-weight: normal;
+
+    color: #000000;
+
+    margin: 0;
+}
+
+
+/* VIEW DETAILS BUTTON  */
+
+.card a {
+    grid-column: 1 / 3;
+    grid-row: 4;
+
+    display: block;
+
     width: 100%;
-    height: 39px;
-    flex-shrink: 0;
-    background: #2454e9;
-    border: 2px solid black;
-    border-radius: 10px;
-    color: white;
-    font-size: 14px;
+
+    margin-top: 20px;
+}
+
+.card a button {
+    width: 100%;
+    height: 42px;
+
+    background-color: #2151e8;
+    color: #ffffff;
+
+    border: 2px solid #000000;
+    border-radius: 9px;
+
+    font-size: 15px;
+    font-weight: 500;
+
     cursor: pointer;
+
+    transition: all 0.3s ease;
 }
 
-.view-button:hover {
-    background: #1744d2;
+/* Button hover */
+
+.card a button:hover {
+    background-color: #ffffff;
+
+    color: #2151e8;
+
+    border: 2px solid #2151e8;
+
+    box-shadow: 0 3px 10px rgba(33, 81, 232, 0.2);
+
+    transform: translateY(-2px);
 }
 
-/* LOADING */
+/* Button click */
 
-.loading {
-    text-align: center;
-    padding: 60px;
+.card a button:active {
+    transform: scale(0.98);
 }
 
-.spinner {
-    width: 30px;
-    height: 30px;
-    margin: auto;
-    border: 4px solid #ddd;
-    border-top-color: #2454e9;
-    border-radius: 50%;
-    animation: spin 0.8s linear infinite;
+
+/* ADD DOCTOR PAGE */
+
+#root > div > div:nth-child(2):has(form) {
+    min-height: calc(100vh - 72px);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 45px 20px;
+
+    background-color: #ffffff;
 }
 
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/* EMPTY / ERROR MESSAGE */
-
-.message {
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.message button {
-    padding: 10px 25px;
-    background: #2454e9;
-    color: white;
-    border: none;
-    border-radius: 7px;
-    cursor: pointer;
-}
 
 /* ADD DOCTOR FORM */
 
-.form-container {
-    max-width: 650px;
-    margin: 25px auto;
-    padding: 30px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+#root > div > div:nth-child(2):has(form) form {
+    width: 650px;
+    max-width: 100%;
+
+    padding: 35px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 16px;
 }
 
-.form-container h2 {
+/* Remove line breaks */
+
+#root > div > div:nth-child(2):has(form) form br {
+    display: none;
+}
+
+
+/* FORM INPUTS */
+
+#root > div > div:nth-child(2):has(form) form input:not([type="submit"]),
+#root > div > div:nth-child(2):has(form) form select {
+    width: 100%;
+    height: 48px;
+
+    padding: 10px 14px;
+
+    border: 1px solid #cccccc;
+    border-radius: 7px;
+
+    background-color: #ffffff;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+
+/* Input focus */
+
+#root > div > div:nth-child(2):has(form) form input:focus,
+#root > div > div:nth-child(2):has(form) form select:focus {
+    border-color: #2151e8;
+
+    box-shadow: 0 0 5px rgba(33, 81, 232, 0.2);
+}
+
+
+/* ADD DOCTOR BUTTON */
+
+#root > div > div:nth-child(2):has(form) form input[type="submit"] {
+    grid-column: 1 / 3;
+
+    width: 100%;
+    height: 48px;
+
+    background-color: #2151e8;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+#root > div > div:nth-child(2):has(form) form input[type="submit"]:hover {
+    background-color: #1238b8;
+}
+
+
+/* DOCTOR DETAILS PAGE */
+
+#root > div > div:nth-child(2):has(> h1) {
+    min-height: calc(100vh - 72px);
+
+    padding: 45px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    background-color: #ffffff;
+}
+
+/* Details heading */
+
+#root > div > div:nth-child(2):has(> h1) h1 {
+    width: 650px;
+    max-width: 100%;
+
     font-family: Georgia, serif;
-    margin-top: 0;
+    font-size: 28px;
+
     margin-bottom: 25px;
 }
 
-.form-container form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+/* Doctor name */
+
+#root > div > div:nth-child(2):has(> h1) h2 {
+    width: 650px;
+    max-width: 100%;
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
 }
 
-.form-container label {
-    font-weight: 600;
-    font-size: 14px;
+/* Doctor information */
+
+#root > div > div:nth-child(2):has(> h1) h6 {
+    width: 650px;
+    max-width: 100%;
+
+    font-size: 17px;
+    font-weight: normal;
+
+    margin-bottom: 15px;
+
+    color: #444444;
 }
 
-.form-container input,
-.form-container select {
+/* Details buttons */
+
+#root > div > div:nth-child(2):has(> h1) button {
+    width: 150px;
     height: 42px;
-    padding: 0 12px;
-    border: 1px solid #bbb;
-    border-radius: 6px;
-    font-size: 14px;
-    margin-bottom: 10px;
-}
 
-.form-actions {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    margin-top: 10px;
-}
+    margin: 10px;
 
-.cancel-button {
-    height: 39px;
-    padding: 0 20px;
-    background: white;
-    border: 1px solid #aaa;
-    border-radius: 8px;
-    cursor: pointer;
-}
+    background-color: #2151e8;
+    color: #ffffff;
 
-.clear-button:disabled {
-    opacity: 0.6;
-    cursor: wait;
-}
-
-/* DETAILS PAGE */
-
-.details-container {
-    max-width: 900px;
-    margin: 20px auto;
-}
-
-.back-button {
-    background: none;
     border: none;
-    color: #2454e9;
+    border-radius: 8px;
+
     font-size: 15px;
-    cursor: pointer;
-    margin-bottom: 20px;
+
+    transition: 0.3s ease;
 }
 
-.details-card {
+#root > div > div:nth-child(2):has(> h1) button:hover {
+    background-color: #1238b8;
+}
+
+
+/* ========================================
+   MOBILE RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 768px) {
+
+    #root > div > div:first-child {
+        flex-wrap: wrap;
+    }
+
+    #root > div > div:first-child button {
+        width: 120px;
+    }
+
+    .card {
+        width: 100%;
+        flex-basis: 100%;
+        max-width: 440px;
+    }
+
+    #root > div > div:nth-child(2):has(form) form {
+        width: 100%;
+    }
+
+}
+
+
+/* SMALL MOBILE SCREENS */
+
+@media (max-width: 480px) {
+
+    #root > div > div:first-child::before {
+        font-size: 20px;
+    }
+
+    #root > div > div:first-child button {
+        width: 105px;
+        font-size: 13px;
+    }
+
+    #root > div > div:nth-child(2):has(form) form {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    #root > div > div:nth-child(2):has(form) form input[type="submit"] {
+        grid-column: 1;
+    }
+
+    .card {
+        grid-template-columns: 80px 1fr;
+
+        padding: 15px;
+
+        column-gap: 12px;
+    }
+
+    .card::before {
+        width: 80px;
+        height: 80px;
+
+        font-size: 48px;
+    }
+
+    .card h1 {
+        font-size: 20px;
+    }
+
+    .card h6 {
+        font-size: 14px;
+    }
+
+}
+
+/* APPLICATION */
+
+#root {
+    min-height: 100vh;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+
+/* NAVBAR */
+
+#root > div > div:first-child {
+    width: 100%;
+    min-height: 72px;
+    background-color: #000000;
+
     display: flex;
     align-items: center;
-    gap: 30px;
-    padding: 30px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    justify-content: flex-end;
+
+    gap: 12px;
+    padding: 12px 22px;
 }
 
-.details-avatar {
-    width: 140px;
-    height: 140px;
-}
+/* Application name */
 
-.details-avatar .avatar {
-    width: 100%;
-    height: 100%;
-}
-
-.details-avatar svg {
-    width: 100%;
-    height: 100%;
-}
-
-.details-card h1 {
+#root > div > div:first-child::before {
+    content: "⊞ Doctors App";
+    color: #ffffff;
     font-family: Georgia, serif;
-    margin: 0 0 10px;
+    font-size: 25px;
+    margin-right: auto;
 }
 
-/* RESPONSIVE */
+/* Navigation buttons */
 
-@media (max-width: 1000px) {
-    .doctor-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+#root > div > div:first-child button {
+    width: 150px;
+    height: 40px;
+
+    background-color: #000000;
+    color: #ffffff;
+
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+
+    font-size: 15px;
 }
 
-@media (max-width: 650px) {
-    .navbar {
-        height: auto;
-        padding: 15px;
+#root > div > div:first-child button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+/* =========================
+   PAGE CONTENT
+========================= */
+
+#root > div > div:nth-child(2) {
+    min-height: calc(100vh - 72px);
+    padding: 35px 5%;
+    background-color: #ffffff;
+}
+
+
+/* =========================
+   HOME PAGE
+========================= */
+
+#root > div > div:nth-child(2):has(.card) > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 22px;
+}
+
+
+/* =========================
+   DOCTOR CARDS
+========================= */
+
+.card {
+    width: 440px;
+    flex: 0 1 440px;
+    min-height: 215px;
+
+    padding: 22px;
+
+    background-color: #ffffff;
+    border: 1px solid #333333;
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    grid-template-rows: auto auto auto 1fr;
+
+    column-gap: 20px;
+    align-items: center;
+}
+
+.card:hover {
+    transform: none;
+}
+
+
+/* =========================
+   DOCTOR AVATAR
+========================= */
+
+.card::before {
+    content: "👨🏻‍⚕️";
+
+    width: 110px;
+    height: 110px;
+
+    background-color: #ff5964;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 65px;
+
+    grid-column: 1;
+    grid-row: 1 / 4;
+}
+
+
+/* =========================
+   DOCTOR NAME
+========================= */
+
+.card h1 {
+    grid-column: 2;
+    grid-row: 1;
+
+    font-family: Georgia, serif;
+    font-size: 25px;
+    color: #000000;
+
+    margin: 0;
+}
+
+
+/* =========================
+   SPECIALIZATION
+========================= */
+
+.card h6:first-of-type {
+    grid-column: 2;
+    grid-row: 2;
+
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: normal;
+
+    color: #174eea;
+    margin: 0;
+}
+
+
+/* =========================
+   GENDER
+========================= */
+
+.card h6:last-of-type {
+    grid-column: 2;
+    grid-row: 3;
+
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: normal;
+
+    color: #000000;
+    margin: 0;
+}
+
+
+/* =========================
+   VIEW DETAILS BUTTON
+========================= */
+
+.card a {
+    grid-column: 1 / 3;
+    grid-row: 4;
+
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.card a button {
+    width: 100%;
+    height: 42px;
+
+    background-color: #2151e8;
+    color: #ffffff;
+
+    border: 2px solid #000000;
+    border-radius: 8px;
+
+    font-size: 15px;
+}
+
+.card a button:hover {
+    background-color: #ffffff;
+    color: #2151e8;
+    border-color: #2151e8;
+}
+
+
+/* =========================
+   ADD DOCTOR / EDIT FORM
+========================= */
+
+#root > div > div:nth-child(2):has(form) {
+    min-height: calc(100vh - 72px);
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 45px 20px;
+}
+
+#root > div > div:nth-child(2):has(form) form {
+    width: 650px;
+    max-width: 100%;
+
+    padding: 30px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* Form line breaks */
+
+#root > div > div:nth-child(2):has(form) form br {
+    display: none;
+}
+
+
+/* =========================
+   FORM INPUTS
+========================= */
+
+#root > div > div:nth-child(2):has(form) form input:not([type="submit"]),
+#root > div > div:nth-child(2):has(form) form select {
+    width: 100%;
+    height: 45px;
+
+    padding: 10px;
+
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+
+    background-color: #ffffff;
+    font-size: 15px;
+}
+
+
+/* =========================
+   FORM SUBMIT BUTTON
+========================= */
+
+#root > div > div:nth-child(2):has(form) form input[type="submit"] {
+    grid-column: 1 / 3;
+
+    width: 100%;
+    height: 45px;
+
+    background-color: #2151e8;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#root > div > div:nth-child(2):has(form) form input[type="submit"]:hover {
+    background-color: #1238b8;
+}
+
+
+/* =========================
+   DOCTOR DETAILS PAGE
+========================= */
+
+.doctor-details-container {
+    width: 100%;
+    min-height: calc(100vh - 72px);
+    padding: 35px 20px;
+    background-color: #ffffff;
+}
+
+.doctor-details-heading {
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.doctor-details-card {
+    width: 650px;
+    max-width: 95%;
+
+    margin: 0 auto;
+    padding: 25px;
+
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+.doctor-details-avatar {
+    width: 100px;
+    height: 100px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #ff5964;
+    border-radius: 50%;
+
+    font-size: 60px;
+}
+
+.doctor-details-name {
+    font-family: Georgia, serif;
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.doctor-details-specialization {
+    color: #2151e8;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   DOCTOR DETAILS TABLE
+========================= */
+
+.doctor-details-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    border: 1px solid #dddddd;
+}
+
+.doctor-details-table th,
+.doctor-details-table td {
+    padding: 15px;
+    border: 1px solid #dddddd;
+    font-size: 16px;
+}
+
+.doctor-details-table th {
+    width: 40%;
+    background-color: #f4f6fb;
+    color: #222222;
+}
+
+.doctor-details-table td {
+    color: #444444;
+}
+
+.doctor-details-table tr:hover {
+    background-color: #f5f8ff;
+}
+
+
+/* =========================
+   DETAILS ACTION BUTTONS
+========================= */
+
+.doctor-details-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.doctor-details-actions button {
+    width: 140px;
+    height: 42px;
+
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+}
+
+.delete-btn:hover {
+    background-color: #b02a37;
+}
+
+.edit-btn {
+    background-color: #2151e8;
+}
+
+.edit-btn:hover {
+    background-color: #1238b8;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    #root > div > div:first-child {
         flex-wrap: wrap;
-        gap: 15px;
     }
 
-    .nav-buttons {
+    #root > div > div:first-child button {
+        width: 120px;
+    }
+
+    .card {
+        width: 100%;
+        flex-basis: 100%;
+        max-width: 440px;
+    }
+
+    #root > div > div:nth-child(2):has(form) form {
         width: 100%;
     }
+}
 
-    .nav-button,
-    .add-nav {
-        flex: 1;
-        width: auto;
+@media (max-width: 480px) {
+
+    #root > div > div:first-child::before {
+        font-size: 20px;
     }
 
-    .filter-bar {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    #root > div > div:first-child button {
+        width: 105px;
+        font-size: 13px;
     }
 
-    .filter-bar input {
-        width: 100%;
-        grid-column: 1 / -1;
-    }
-
-    .filter-bar select,
-    .clear-button {
-        width: 100%;
-        min-width: 0;
-    }
-
-    .doctor-grid {
+    #root > div > div:nth-child(2):has(form) form {
         grid-template-columns: 1fr;
+        padding: 20px;
     }
 
-    .doctor-card {
-        padding: 18px;
+    #root > div > div:nth-child(2):has(form) form input[type="submit"] {
+        grid-column: 1;
     }
 
-    .doctor-avatar {
-        width: 90px;
-        height: 90px;
+    .card {
+        grid-template-columns: 80px 1fr;
+        padding: 15px;
+        column-gap: 12px;
     }
 
-    .doctor-details h2 {
-        font-size: 21px;
+    .card::before {
+        width: 80px;
+        height: 80px;
+        font-size: 48px;
     }
 
-    .details-card {
-        flex-direction: column;
-        align-items: flex-start;
+    .card h1 {
+        font-size: 20px;
+    }
+
+    .card h6 {
+        font-size: 14px;
+    }
+
+    .doctor-details-card {
+        padding: 15px;
+    }
+
+    .doctor-details-table th,
+    .doctor-details-table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .doctor-details-actions button {
+        width: 120px;
     }
 }
